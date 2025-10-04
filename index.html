@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="VER Project Page">
+  <meta property="og:title" content="VER: Vision Expert Transformer for Robot Learning via Foundation Distillation and Dynamic Routing"/>
+  <meta property="og:description" content="Multi-task and Continual Learning with Mixture-of-Experts"/>
+  <meta property="og:url" content="anonymous"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="VER: Vision Expert Transformer for Robot Learning via Foundation Distillation and Dynamic Routing">
+  <meta name="twitter:description" content="Multi-task and Continual Learning with Mixture-of-Experts">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Multi-task Learning, Continual Learning, Mixture-of-Experts, Robotic Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>VER: Vision Expert Transformer for Robot Learning via Foundation Distillation and Dynamic Routing</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">VER: Vision Expert Transformer for Robot Learning via Foundation Distillation and Dynamic Routing</h1>
+             <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+               <!-- <span class="author-block">
+                <a href="" target="_blank">Anonymous Authors</a>
+                <span class="author-block"> -->
+                <a href="" target="_blank">Anonymous Authors</a>
+                </div>
+
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="https://mega.nz/folder/PZ0hgQoS#mzp0pOZlV5JrsDRnx9eeDw" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a >
+                </span>
+
+
+                <!-- checkpoints link -->
+                  <span class="link-block">
+                    <a href="https://mega.nz/folder/DZlDhJBZ#dsp8_HLLkpL4c3FD74o5sg" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Checkpoints</span>
+                  </a >
+                </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<style>
+  .video-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Aligns videos vertically */
+    flex-wrap: wrap; /* Allows elements to wrap onto the next line */
+  }
+  .video-box {
+    text-align: center; /* Centers the caption below the video */
+    margin: 10px;
+  }
+  .fixed_video {
+    width: 480px; /* Fixed width */
+    height: 360px; /* Fixed height */
+    display: block; /* Ensures the video doesn't have inline whitespace */
+    margin: auto; /* Centers the video within its box */
+  }
+  .fixed_video_wider {
+    width: 720px; /* Fixed width */
+    height: 360px; /* Fixed height */
+    display: block; /* Ensures the video doesn't have inline whitespace */
+    margin: auto; /* Centers the video within its box */
+  }
+  .caption {
+    font-size: 16px;
+    color: #333;
+  }
+</style>
+</head>
+<!-- <body>
+<div class="video-container">
+  <div class="video-box">
+    <video class = "fixed_video" poster="" id="tree" autoplay controls muted loop >
+      <source src="static/videos/pen_feature_norm.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="caption"><b>Multitask - Simulation</b>.</div>
+  </div>
+  <div class="video-box">
+    <video class = "fixed_video_wider" poster="" id="tree" autoplay controls muted loop >
+      <source src="static/videos/relocate_feature_norm.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="caption"><b>Sparsity of SDP</b>. During the inference, only some of the experts (in orange and pink) are activated.</div>
+  </div>
+</div>
+</body> -->
+</html>
+
+
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Pretrained vision foundation models (VFMs) advance robotic learning via rich visual representations, yet individual VFMs typically excel only in specific domains, limiting generality across tasks. Distilling multiple VFMs into a unified representation can mitigate this limitation but often yields inflexible task-specific feature selection and requires costly full retraining to incorporate robot-domain knowledge. We propose VER, a Vision Expert transformer for Robot learning. During pretraining, VER distills multiple VFMs into a vision expert library. We then fine-tune only a lightweight routing network (fewer than 0.4% of parameters) to dynamically select task-relevant experts from the pretrained library for downstream robot tasks. We further introduce Patchwise Expert Routing with Curriculum Top-K Annealing to improve both flexibility and precision of dynamic expert selection. Moreover, VER supports parameter-efficient finetuning for scalable expert utilization and robot-domain knowledge integration. Across 17 diverse robotic tasks and multiple policy heads, VER achieves state-of-the-art performance. We find that VER reduces large-norm outliers in task-irrelevant regions (e.g., background) and concentrates on task-critical regions. Code and checkpoints are available in the supplementary materials.
+            Across 17 diverse robotic tasks and multiple policy heads, VER achieves state-of-the-art performance. We find that VER reduces large-norm outliers in task-irrelevant regions (e.g., background) and concentrates on task-critical regions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- New image section -->
+<section class="hero image-section">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/pdfs/structure_ver.pdf" alt="Description of image" style="width: 100%; height: auto;">
+      <h2 class="subtitle has-text-centered" style="font-size: 16px;">
+        Overall structure of VER. VER comprises two key components: the Base Vision Transformer (BVT), which processes images into unified representations; 
+        the Vision Expert Library (VEL), which stores a diverse set of specialized vision experts and selectively utilizes the experts to mimic teacher vision 
+        foundation models and enhance performance in downstream robotic tasks. Our framework consists of two phases: (1) Pretraining, where we distill multiple 
+        foundation models (DINOv2, ViT, CLIP) into VER; (2) Downstream Robotic Tasks, where we freeze the experts and train a lightweight 
+        Robot Router (<0.4% parameters) that dynamically selects task-relevant visual features to guide the policy head in generating appropriate robotic actions. 
+        This two-stage approach enables efficient knowledge distillation from diverse vision foundation models and adaptive feature selection for robotic tasks.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End new image section -->
+ 
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Patch Feature Visualization</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!--  Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/pen_feature_norm.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered" style="font-size: 16px;">
+        <b>Patch feature visualization on pen task across 10 training random seeds.</b>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+<!--  Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="video-container">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/relocate_feature_norm.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered" style="font-size: 16px;">
+        <b>Patch feature visualization on relocate task across 10 training random seeds.</b>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+
+<!--  Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="video-container">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/pickplace_feature_norm.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered" style="font-size: 16px;">
+        <b>Patch feature visualization on pick and place task. We compare with Theia (left), VER before expert selection (middle), and VER after expert selection (right). 
+          After expert selection, VER concentrates on task-relevant objects and suppresses robot-related and background patches.</b>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+
+  </body>
+  </html>
+
+
+
+
+
+
