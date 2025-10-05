@@ -134,6 +134,9 @@
     font-size: 16px;
     color: #333;
   }
+  .hero.teaser {
+    margin-bottom: 4rem; /* Increase spacing between video sections */
+  }
 </style>
 </head>
 <!-- <body>
@@ -184,11 +187,11 @@
     <div class="hero-body">
       <img src="static/pdfs/structure_ver.pdf" alt="Description of image" style="width: 100%; height: auto;">
       <h2 class="subtitle has-text-centered" style="font-size: 16px;">
-        Overall structure of VER. VER comprises two key components: the Base Vision Transformer (BVT), which processes images into unified representations; 
-        the Vision Expert Library (VEL), which stores a diverse set of specialized vision experts and selectively utilizes the experts to mimic teacher vision 
+        Overall structure of VER. VER comprises two key components: the Base Vision Transformer (BVT), which processes images into unified representations, 
+        and the Vision Expert Library (VEL), which stores a diverse set of specialized vision experts and selectively utilizes them to mimic teacher vision 
         foundation models and enhance performance in downstream robotic tasks. Our framework consists of two phases: (1) Pretraining, where we distill multiple 
         foundation models (DINOv2, ViT, CLIP) into VER; (2) Downstream Robotic Tasks, where we freeze the experts and train a lightweight 
-        Robot Router (<0.4% parameters) that dynamically selects task-relevant visual features to guide the policy head in generating appropriate robotic actions. 
+        Robot Router (&lt;0.4% parameters) that dynamically selects task-relevant visual features to guide the policy head in generating appropriate robotic actions. 
         This two-stage approach enables efficient knowledge distillation from diverse vision foundation models and adaptive feature selection for robotic tasks.
       </h2>
     </div>
@@ -197,17 +200,27 @@
 <!-- End new image section -->
  
 
-<!-- Paper abstract -->
+
+
+
+<!-- Section 2 -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Patch Feature Visualization</h2>
+        <div class="content has-text-justified">
+          <p>
+            Through lightweight Robot Router training, VER learns to dynamically select task-relevant experts from the pretrained library for downstream robot tasks. 
+            Patch feature visualization shows that VER concentrates on task-relevant patches, significantly reducing extreme outliers in task-irrelevant regions (e.g., background).
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<!-- End Section 2 -->
+
 
 <!--  Teaser video-->
 <section class="hero teaser">
@@ -219,7 +232,10 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered" style="font-size: 16px;">
-        <b>Patch feature visualization on pen task across 10 training random seeds.</b>
+        <b>Patch feature visualization on pen task across 10 training random seeds.</b> 
+        We find that if we only use the pretrained vision foundation model experts, they cannot focus on the task-relevant patches.
+        With patch-wise routing (PER) and curriculum top-k annealing (CTA), VER can dynamically and robustly select suitable experts from the pretrained library, resulting in 
+        patch features that concentrate on the task-relevant patches.
       </h2>
     </div>
   </div>
@@ -252,12 +268,47 @@
     <div class="video-container">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/pickplace_feature_norm.mp4"
+        <source src="static/videos/bin_cup.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered" style="font-size: 16px;">
-        <b>Patch feature visualization on pick and place task. We compare with Theia (left), VER before expert selection (middle), and VER after expert selection (right). 
-          After expert selection, VER concentrates on task-relevant objects and suppresses robot-related and background patches.</b>
+        <b>Patch feature visualization on bin-cup task.</b> We compare Theia (left column), VER before expert selection (middle column), and VER after expert selection (right column). 
+        After expert selection, VER concentrates on task-relevant objects and suppresses features from robot-related and background patches.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!--  Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="video-container">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/cross_bin.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered" style="font-size: 16px;">
+        <b>Patch feature visualization on cross-bin task.</b>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!--  Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="video-container">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/cy_plate.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered" style="font-size: 16px;">
+        <b>Patch feature visualization on cylinder-plate task.</b> Most surprisingly, VER can focus on the correct patches 
+        during different task stages. In the in-hand camera, when grasping the cylinder, VER focuses on the cylinder and ignores the plate. When moving to the plate, VER switches to focus on the plate.
       </h2>
     </div>
   </div>
@@ -265,9 +316,69 @@
 <!-- End teaser video -->
 
 
+<!-- Section 1 -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiment results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate VER on different policy heads (flow matching policy, diffusion policy, behavior cloning policy) across 17 diverse robotic tasks. Results show that across all policy heads,
+            VER consistently achieves strong performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Section 1 -->
 
-  </body>
-  </html>
+<!-- New image section -->
+<section class="hero image-section">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/overall_performance.png" alt="Description of image" style="width: 100%; height: auto;">
+      <h2 class="subtitle has-text-centered" style="font-size: 16px;">
+        Performance comparison with other vision encoders on 11 tasks from Franka Kitchen, Meta-World, and Adroit environments. The same policy head from Theia is used for a fair comparison of vision encoders. 
+        Our approach, VER, achieves the highest average success rate (74.7%), demonstrating its superiority.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End new image section -->
+
+<!-- New image section -->
+<section class="hero image-section">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/different_policy_head_performance.png" alt="Description of image" style="width: 100%; height: auto;">
+    </div>
+  </div>
+</section>
+<!-- End new image section -->
+
+<!-- New image section -->
+<section class="hero image-section">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/topk_tfs.png" alt="Description of image" style="width: 100%; height: auto;">
+    </div>
+  </div>
+</section>
+<!-- End new image section -->
+
+<!-- BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>to be added</code></pre>
+  </div>
+</section>
+<!-- End BibTex citation -->
+
+</body>
+</html>
 
 
 
